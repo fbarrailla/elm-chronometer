@@ -56,5 +56,9 @@ title {
   margin-left: 10px;
 }
 .Chrono button:hover {
+  border-bottom-color: rgba(0, 0, 0, .5);
+}
+.Chrono.started button:first-child,
+.Chrono.stopped button:nth-child(2) {
   border-bottom-color: #000;
 }

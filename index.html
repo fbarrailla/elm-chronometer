@@ -3,8 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <title>Elm Chronometer</title>
+  <link rel="stylesheet" href="style.css">
+  <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300' rel='stylesheet' type='text/css'>
+  <script src="main.js"></script>
 </head>
 <body>
-  <script src="main.js"></script>
+  <script>
+    Elm.Main.fullscreen()
+    // work around to prevent buttons from behing focused
+    setTimeout(function() {
+      Array.prototype.forEach.call(document.querySelectorAll('button'), function(btn) {
+        btn.addEventListener('mousedown', function(evt) { evt.preventDefault() })
+      })
+    }, 100)
+  </script>
 </body>
 </html>
